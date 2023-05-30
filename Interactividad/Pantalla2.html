@@ -1,0 +1,37 @@
+<canvas width="600" height="400"></canvas>
+
+<script>
+    var lienzo = document.querySelector("canvas");
+    var p = lienzo.getContext("2d");
+    p.fillStyle = "lightgray";
+    p.fillRect(0,0,600,400);
+
+    function disecharCircunferencia(x,y,r){
+        p.fillStyle = "blue";
+        p.beginPath();
+        p.arc(x,y,r,0,2*Math.PI);
+        p.fill();
+    }
+
+    disecharCircunferencia(20,20,10);
+    disecharCircunferencia(20,20,10);
+
+    //for(var x = 20; x < 600; x++){
+    //    disecharCircunferencia(x,20,10);
+    //}
+    function limpiarPantalla(){
+        p.clearRect(0,0,600,400);
+    }
+
+    function exhibirMensajes(){
+        console.log("Mostrar mensaje");
+    }
+    var x = 0
+    function actualizarPantalla(){
+        limpiarPantalla();
+        disecharCircunferencia(x,20,10);
+        x++;
+    }
+    setInterval(actualizarPantalla,1);
+
+</script>
