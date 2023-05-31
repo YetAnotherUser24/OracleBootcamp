@@ -1,0 +1,19 @@
+<canvas width="600" height="400">
+
+</canvas>
+
+<script>
+    var lienzo = document.querySelector("canvas");
+    var p = lienzo.getContext("2d");
+
+    p.fillStyle = "green";
+    p.fillRect(0,0,350,300); // cabeza
+
+    p.fillStyle = "black";
+    p.fillRect(50,70,90,90); // ojo L
+    p.fillRect(210,70,90,90); // ojo R
+    p.fillRect(140,160,70,100); // nariz
+    p.fillRect(100,200,40,100); // boca L
+    p.fillRect(210,200,40,100); // boca R
+
+</script>
